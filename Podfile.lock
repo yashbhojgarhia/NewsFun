@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.9.1)
+  - DocumentClassifier (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - DocumentClassifier (= 1.2.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DocumentClassifier
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  DocumentClassifier: a32b4d0dbcd0c38ec9ef16949c184923e16d818a
 
-PODFILE CHECKSUM: 178160a168ddde1ecca8c5c9fb90aa9e0cf22c2c
+PODFILE CHECKSUM: 81c2ebd5b2594a680c381b0a59ee91adfb5ddc38
 
 COCOAPODS: 1.10.1
