@@ -12,12 +12,12 @@
         <scene sceneID="lXX-Rz-XsA">
             <objects>
                 <tableViewController id="0g0-hl-ca4" customClass="ArticleTableViewController" customModule="NewsFun" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kxh-Eu-Icn">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kxh-Eu-Icn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="261" id="Ukr-T8-AKt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="261" id="Ukr-T8-AKt" customClass="ArticleCell" customModule="NewsFun" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="261"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ukr-T8-AKt" id="Qj3-66-qgz">
@@ -44,7 +44,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DN5-5L-xhO">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="articlePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="DN5-5L-xhO">
                                             <rect key="frame" x="25" y="61" width="364" height="164"/>
                                         </imageView>
                                     </subviews>
@@ -61,6 +61,11 @@
                                         <constraint firstItem="iD5-mS-IzT" firstAttribute="top" secondItem="DN5-5L-xhO" secondAttribute="bottom" id="w7V-6h-ay9"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleImageView" destination="DN5-5L-xhO" id="ttb-ue-6ld"/>
+                                    <outlet property="categoryLabel" destination="iD5-mS-IzT" id="aJQ-g4-JPX"/>
+                                    <outlet property="titleLabel" destination="LyO-vq-h9i" id="tYZ-UX-9xY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -130,6 +135,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="articlePlaceholder" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

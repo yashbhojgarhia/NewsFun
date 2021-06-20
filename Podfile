@@ -7,6 +7,6 @@ target 'NewsFun' do
 
   # Pods for NewsFun
  pod 'Alamofire', '~> 4.7'
- pod 'DocumentClassifier', '1.2.0'
- 
+ pod 'DocumentClassifier'
+ pod 'Kingfisher'
 end
